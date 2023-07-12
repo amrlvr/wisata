@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* ROOT */
+
+:root {
+  --primary: #18122B;
+  --second: #393053;
+  --third: #443C68;
+  --alternate: #635985;
+  --font: 'Montserrat', sans-serif;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  font-family: var(--font);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* WRAPPER */
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary);
+}
+
+/* END WRAPPER */
+
+/* VEKTOR BG and OVERLAY */
+
+.bg-image {
+  width: 100%;
+  height: 100%;
+}
+
+.bg-image .vector-bg {
+  width: 100%;
+  min-height: 100%;
+  position: fixed;
+  /* top: -200px; */
+  z-index: 1;
+}
+
+.bg-image .overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+/* END VEKTOR BG and OVERLAY */
+
+/* CONTAINER */
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 3;
+  color: white;
+}
+
+/* END CONTAINER */
+
+/* NAV */
+
+nav {
+  width: 100%;
+  padding: 20px 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+nav img {
+  width: 120px;
+}
+
+nav .navbar {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+nav a {
+  width: 100px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 22px;
+}
+
+nav .logo {
+  cursor: pointer;
+}
+
+.active {
+  background-color: var(--second);
+}
+
+/* END NAV */
+
+/* MAIN */
+
+main {
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 45%;
+}
+
+main h1 {
+  font-size: 70px;
+  font-weight: 800;
+  letter-spacing: 7px;
+}
+
+main p {
+  letter-spacing: 10px;
+  word-spacing: 5px;
+  font-size: 18px;
+}
+
+button {
+  padding: 13px;
+  background: none;
+  background-color: var(--third);
+  border: none;
+  border-radius: 22px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in;
+}
+
+main button:hover {
+  background-color: var(--second);
+}
+
+/* END MAIN */
+
+/* FOOTER */
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 30px;
+  text-align: center;
+  /* letter-spacing: 4px; */
+}
+
+/* END FOOTER */
+
+/* GALLERY */
+
+.main-gallery {
+  top: 41%;
+}
+
+.main-gallery p {
+  letter-spacing: 5px;
+}
+
+.gallery-display {
+  width: 100%;
+  height: 100vh;
+  display: none;
+}
+
+
+.gallery-section {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-section .close-gallery {
+  font-size: 30px;
+  cursor: pointer;
+  width: 30px;
+  position: fixed;
+  right: 40px;
+  top: 40px;
+}
+
+.gallery-section .gallery-contain {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+}
+
+.gallery-section img {
+  width: 300px;
+}
+
+.gallery-section i {
+  font-size: 60px;
+  cursor: pointer;
+}
+
+.gallery-section .gallery-left {
+  position: fixed;
+  left: 70px;
+}
+
+.gallery-section .gallery-right {
+  position: fixed;
+  right: 70px;
+}
+
+/* END GALLERY */
+
+/* ABOUT */
+
+.about {
+  top: 32%;
+}
+
+.about-desc {
+  width: 500px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-desc p {
+  letter-spacing: 0;
+}
+
+.about-desc .eng-indo {
+  display: flex;
+  margin-top: 10px;
+  flex-direction: row;
+  gap: 10px;
+  background-color: var(--third);
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+
+.about-desc .eng-indo .eng,
+.about-desc .eng-indo .ind {
+  cursor: pointer;
+}
+
+.eng-indo .current {
+  color: var(--primary);
+}
+
+/* END ABOUT */
+
+/* CONTACT */
+
+.contact {
+  top: 40%;
+}
+
+.contact h5 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.contact-us {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px;
+}
+
+.contact-us p {
+  letter-spacing: 0;
+  word-spacing: 0;
+}
+
+.contact-us .whatsapp {
+  padding: 10px 15px;
+  background-color: #25D366;
+  border-radius: 22px;
+  cursor: pointer;
+  width: 130px;
+  text-align: center;
+}
+
+.contact-us .whatsapp p,
+.contact-us .instagram p,
+.contact-us .tiktok p {
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+.contact-us .instagram {
+  padding: 10px 15px;
+  background-image: linear-gradient(to bottom left, #405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+  border-radius: 22px;
+  cursor: pointer;
+  width: 130px;
+  text-align: center;
+}
+
+.contact-us .tiktok {
+  padding: 10px 15px;
+  background-color: #000;
+  border-radius: 22px;
+  cursor: pointer;
+  width: 130px;
+  text-align: center;
+}
+
+.whatsapp,
+.instagram,
+.tiktok {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* END CONTACT */
+
+nav .burger {
+  display: none;
+  font-size: 30px;
+}
+
+nav .navbar .close-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    min-width: 100%;
+    height: 100%;
+  }
+
+  /* BG IMAGE */
+
+  .vector-bg {
+    min-width: 150%;
+    max-height: 100%;
+    /* top: 0; */
+    left: -100px;
+  }
+
+  /* END BG IMAGE */
+
+  /* NAV */
+
+  nav {
+    width: 100%;
+    padding: 20px 40px 20px 20px;
+  }
+
+  nav .navbar {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav .navbar .close-nav {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 30px;
+  }
+
+  nav .burger {
+    display: block;
+  }
+
+  /* END NAV */
+
+  /* MAIN */
+
+  main h1 {
+    font-size: 36px;
+  }
+
+  main p {
+    font-size: 14px;
+  }
+
+  /* END MAIN */
+}
+
+@media only screen and (max-width: 465px) {
+  main {
+    top: 48%;
+  }
+
+  main h1 {
+    font-size: 28px;
+  }
+
+  main p {
+    font-size: 12px;
+    letter-spacing: 7px;
+  }
+}
+
+@media only screen and (max-width: 382px) {
+  main {
+    top: 48%;
+  }
+
+  main h1 {
+    font-size: 24px;
+  }
+
+  main p {
+    font-size: 12px;
+    letter-spacing: 6px;
+  }
+}
